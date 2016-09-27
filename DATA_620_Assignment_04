@@ -1,0 +1,35 @@
+			Assignment 04 (DATA 620)
+
+Data set:
+The data sets that I have selected correspond to a social network that contains relationship between users. The users have attributes like the following:
+employer
+places_lived
+major
+school
+
+The datasets are available at following URL 
+http://home.engineering.iastate.edu/~neilgong/dataset.html
+The data sets can only be accquired by emailing the Iowa State University email address: neilgong@iastate.edu
+I have already procured the data sets on my local machine.
+
+Description of Data sets:
+
+direct_social_structure.txt : the directed social structure. Format:
+UserIDFrom UserIDTo TimeID
+Each line corresponds to a directed link. UserIDs are anonimyzed to be integers starting from 0. TimeID is 0, 1, 2 or 3, indicating the snapshot in which this directed link first appears.
+
+node_attri.txt            :  node attributes. Format:
+UserID AttriID TimeID
+Each line corresponds to an undirected attribute link. AttriID are anonimyzed to be negative integers starting from -1. Again, TimeID is 0, 1, 2 or 3, indicating the snapshot in which this link first appears.
+
+attri_type.txt            :  attributes type. Format:
+AttriID AttriType
+Each line corresponds to an attribute. AttriType could be employer, school, major or places_lived. 
+
+
+Data Loading, cleansing and analysis:
+
+I will be loading the datasets by downloading them and then scrubbing the data, using python, to get the nodes, edges and the attributes. The way the files are formatted is very raw and I will have to process, restructure the data and clean it before I can load it into a graph network. I might also need to truncate the data if it seems too large to fit into memory.
+
+We have many categorical variables in this data set.  My hypothetical outcome is a prediction that students who have marketing as their major will have a higher degree of centrality than students with other majors. This is based on  the observation that people in marketing tend to be more adept at making new contacts and also tend to become leaders.
+
